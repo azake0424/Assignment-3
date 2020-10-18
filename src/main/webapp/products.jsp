@@ -10,20 +10,20 @@
 <body>
 <jsp:include page="blocks/header.jsp"/>
 
-<div class="row">
+<div class="row" style="margin-top: 50px">
     <%
         List<Product> products = (List<Product>) request.getAttribute("products");
-        for (int i = 0; i < products.size(); i++){%>
-    <div class="col-md-7">
-        <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="<%=products.get(i).getImage()%>" alt="">
-        </a>
-    </div>
+        for (int i = 0; i < products.size(); i++){
+    %>
+    <form action="<%=request.getContextPath()%>/basket"></form>
+    <img src="<%=products.get(i).getImage()%>" width="200px" height="200px" style="margin-left: 300px" alt="">
     <div class="col-md-5">
         <h3><%=products.get(i).getName()%></h3>
         <p><%=products.get(i).getDescription()%></p>
         <p><%=products.get(i).getPrice()%></p>
-        <a class="btn btn-primary" href="#">Add</a>
+        <a href="<%=request.getContextPath()%>/basket?name=<%=products.get(i).getName()%>&image=<%=products.get(i).getImage()%>">
+        <button class="btn btn-primary" type="submit" >Add to basket</button>
+        </a>
     </div>
     <%}%>
     <hr>

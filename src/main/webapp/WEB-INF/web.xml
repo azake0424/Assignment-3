@@ -30,4 +30,12 @@
         <servlet-name>Products</servlet-name>
         <url-pattern>/products</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Basket</servlet-name>
+        <servlet-class>Controllers.Basket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Basket</servlet-name>
+        <url-pattern>/basket</url-pattern>
+    </servlet-mapping>
 </web-app>
