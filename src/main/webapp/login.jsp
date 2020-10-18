@@ -19,7 +19,7 @@
         <div class="col">
             <h1>Login</h1>
             <form action="<%=request.getContextPath()%>/login" method="post">
-                <input type="text" class="form-control" name="username" id="username" placeholder="Username"><br>
+                <input type="email" class="form-control" name="username" id="username" placeholder="Username"><br>
                 <input type="password" class="form-control" name="password" id="password" placeholder="password"><br>
                 <button class="btn btn-success" type="submit">Submit</button>
             </form>
