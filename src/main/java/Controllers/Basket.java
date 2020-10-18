@@ -10,11 +10,10 @@ import java.io.IOException;
 @WebServlet(name = "Basket")
 public class Basket extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            HttpSession session = request.getSession();
+        HttpSession session = request.getSession();
 
 
         String name =  request.getParameter("name");
@@ -22,18 +21,18 @@ public class Basket extends HttpServlet {
 
         session.setMaxInactiveInterval(60);
 
-            BasketCart basket = (BasketCart) session.getAttribute("basket");
+        BasketCart basket = (BasketCart) session.getAttribute("basket");
 
-            if (basket == null) {
-                basket = new BasketCart();
+        if (basket == null) {
+            basket = new BasketCart();
 
-                basket.setName(name);
-                basket.setImage(image);
-            }
+            basket.setName(name);
+            basket.setImage(image);
+        }
 
-            session.setAttribute("basket",basket);
+        session.setAttribute("basket",basket);
 
-        response.sendRedirect(request.getContextPath()+"/products");
+        request.getRequestDispatcher("/basket.jsp").forward(request,response);
     }
 
 }
