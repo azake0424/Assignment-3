@@ -11,7 +11,7 @@
     <h5 class="mean-fruit-gradient my-0 mr-md-auto font-weight-normal">Shop</h5>
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="<%=request.getContextPath()%>/products">Main</a>
-        <a class="p-2 text-dark" href="<%=request.getContextPath()%>/basket">Basket</a>
+        <a class="p-2 text-dark" href="basket.jsp">Basket</a>
     </nav>
     <a class="btn btn-outline-primary" href="<%=request.getContextPath()%>/logout" >Logout</a>
 

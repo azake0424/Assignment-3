@@ -38,4 +38,20 @@
         <servlet-name>Basket</servlet-name>
         <url-pattern>/basket</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteFromBasket</servlet-name>
+        <servlet-class>Controllers.DeleteFromBasket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteFromBasket</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Pay</servlet-name>
+        <servlet-class>Controllers.Pay</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Pay</servlet-name>
+        <url-pattern>/pay</url-pattern>
+    </servlet-mapping>
 </web-app>
