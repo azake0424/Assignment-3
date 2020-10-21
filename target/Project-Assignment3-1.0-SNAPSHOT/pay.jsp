@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Zangar
@@ -17,6 +18,8 @@
 
 <div class="container">
         <h1>Your count is ${count}</h1>
+    <c:set scope="request" var="greeting" value="Thank you for your purchase" />
+    <c:out value="${greeting}"/>
 </div>
 
 <jsp:include page="blocks/footer.jsp"/>

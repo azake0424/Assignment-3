@@ -54,4 +54,12 @@
         <servlet-name>Pay</servlet-name>
         <url-pattern>/pay</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Sorting</servlet-name>
+        <servlet-class>Controllers.Sorting</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Sorting</servlet-name>
+        <url-pattern>/sorting</url-pattern>
+    </servlet-mapping>
 </web-app>
